@@ -1,0 +1,72 @@
+---
+title: "Introduction to research data management"
+author: Daniel Manrique-Castano, Ph.D
+format: 
+  html:
+    embed-resources: true
+  revealjs:
+    footer: "RDM training - Daniel Manrique-Castano, Ph.D"
+    logo: alliance_logo.png
+    theme: white
+    transition: fade
+    slide-number: true
+    show-slide-number: all
+    preview-links: auto
+
+
+
+bibliography: references.bib 
+---
+
+## We face a reproducibility/ethical crisis
+
+![Reports on the reproducibility crisis](images/crisis1.png){fig-align=center}
+
+## Some well-known causes
+
+![Causes of the reproducibility crisis](images/crisis.png){fig-align=center}
+
+## Research Data Management (RDM)
+
+RDM consist in the organization/handling, storage, sharing and (short-long term) preservation of research data. This can include physical objects/files, documents, images, audio, etc.
+
+![Image by https://datadryad.org/](images/dataset-structure.jpg){fig-align=center}
+
+## Why RDM is important?
+
+### From a researchers perspective
+
+- Managing data correctly makes your data usable/reusable (for you and others).
+- Ensure the fidelity and and encourages validation of your research.
+- Improve your efficiency and that of your research team.
+- Upholds the professional/ethical commitment to research integrity.
+
+
+## Why RDM is important?
+
+### From a social/legal perspective
+
+- Funding agencies require data management plans (DMPs) and open sharing of data to maximaze benefits to society. [Tri-Agency Research Data Management Policy](https://science.gc.ca/site/science/en/interagency-research-funding/policies-and-guidelines/research-data-management/tri-agency-research-data-management-policy-frequently-asked-questions)
+- Hopefully, in a few years the deposit of raw data and analysis codes will be a requirement of scientific journals. 
+- Help to build trust in the scientific endeavor through transparent open science practices.
+
+
+## In summary...
+
+RDM is a matter of professional responsibility, ethical behavior, and commitment to best scientific practices. 
+
+
+## FAIR principles 
+
+![Image by https://biosistemika.com/](images/FAIR_Principles.png){fig-align=center width="500" height="250"}
+
+::: {.r-fit-text}
+- **Findable:** All data must carry identifiers and metadata that facilitate its discovery. 
+- **Accessible:** The community should be able to access your data. 
+- **Interoperable:** The data must comply with specific standards (i.e. standardized vocabularies) and formats (i.e. .csv, .tif).  
+- **Reusable:** The data must be sufficiently described (and licensed) to allow its reuse by the community.
+:::
+
+## Research project life cycle {.center} # centering does not work
+
+![Image by SZF TU Berlin](images/DataCycle.webp){fig-align=center width="700" height="500"}
