@@ -13,12 +13,12 @@ format:
     show-slide-number: all
     preview-links: auto
 
-
+css: styles.css
 
 bibliography: references.bib 
 ---
 
-## We face a reproducibility/ethical crisis
+## We face a reproducibility/ethical crisis {style="text-align: center;"}
 
 ![Reports on the reproducibility crisis](images/crisis1.png){fig-align=center}
 
@@ -32,7 +32,7 @@ RDM consist in the organization/handling, storage, sharing and (short-long term)
 
 ![Image by https://datadryad.org/](images/dataset-structure.jpg){fig-align=center}
 
-## Why RDM is important?
+## Why RDM is important? 
 
 ### From a researchers perspective
 
@@ -56,7 +56,7 @@ RDM consist in the organization/handling, storage, sharing and (short-long term)
 RDM is a matter of professional responsibility, ethical behavior, and commitment to best scientific practices. 
 
 
-## FAIR principles 
+## FAIR principles {style="text-align: center;"}
 
 ![Image by https://biosistemika.com/](images/FAIR_Principles.png){fig-align=center width="500" height="250"}
 
@@ -67,6 +67,6 @@ RDM is a matter of professional responsibility, ethical behavior, and commitment
 - **Reusable:** The data must be sufficiently described (and licensed) to allow its reuse by the community.
 :::
 
-## Research project life cycle {.center} # centering does not work
+## Research project life cycle {style="text-align: center;"}
 
 ![Image by SZF TU Berlin](images/DataCycle.webp){fig-align=center width="700" height="500"}

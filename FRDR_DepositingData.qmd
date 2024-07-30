@@ -1,25 +1,115 @@
 ---
-title: "FRDR_DepositingData"
-format: revealjs
+title: "Depositing Data into FRDR"
+author: 
+  - name: Daniel Manrique-Castano, Ph.D
+    email: daniel.manrique-castano@alliancecan.ca
+    affiliations:
+      - name: Digital Research Alliance of Canada
+format: 
+  html:
+    embed-resources: true
+  revealjs:
+    footer: "Depositing Data into FRDR - Daniel Manrique-Castano, Ph.D"
+    logo: alliance_logo.png
+    theme: white
+    transition: fade
+    slide-number: true
+    show-slide-number: all
+    preview-links: auto
+
+css: styles.css
+
+bibliography: references.bib 
 ---
 
-## Quarto
+## Ensuring the data is a aaluable, standalone resource {style="text-align: center;"}
 
-Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+- A brief introduction to FRDR.
+- The significance of submitting well-structured data.
+- Key steps and best practices for depositing data into FRDR.
 
-## Bullets
 
-When you click the **Render** button a document will be generated that includes:
+## Understanding FRDR
 
--   Content authored with markdown
--   Output from executable code
+::: {.r-fit-text}
 
-## Code
+**Definition**:
 
-When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+The Federated Research Data Repository (FRDR) is a national platform for Canadian researchers to store, share, and discover research data.
 
-```{r}
-1 + 1
-```
+**Goals**:
+
+  - Enhance data discoverability.
+  - Promote open data practices.
+  - Ensure long-term preservation of research data.
+
+
+FRDR supports a wide range of disciplines and data types and provides a robust infrastructure for managing and disseminating research data across Canada.
+
+:::
+
+## Benefits of using FRDR
+
+::: {.r-fit-text}
+
+**Long-term preservation**:
+
+  - FRDR ensures long-term preservation, accessibility and usability.
+
+**Compliance with funding requirements**:
+
+  - Funding [agencies](https://science.gc.ca/site/science/en/interagency-research-funding/policies-and-guidelines/research-data-management/tri-agency-research-data-management-policy-frequently-asked-questions) require data management plans and (soon) open access to data. FRDR helps you comply with these requirements.
+
+**Increased visibility and citation**:
+
+  - Sharing your data increases its visibility and contributes to reproducible science.
+
+**Support for large datasets**:
+
+  - FRDR supports large/heavy datasets, making it an ideal repository for data-intensive research.
+
+:::
+
+
+## Common issues in data repositories
+
+::: {.r-fit-text}
+
+**Insufficient metadata / contextual information**:
+
+  - Lacking of comprehensive metadata and readme file(s) that explain the context, methodology, and structure of the dataset.
+
+
+**Lack of structured data**:
+
+  - Disorganized data makes it difficult to understand and reuse the data.
+
+
+**Dependency on research articles**:
+
+  - Some datasets require the accompanying research article for full understanding, limiting the dataset's standalone value and usability.
+
+:::
+
+
+# Planning Your Data Structure
+
+## Define a dataset schema:
+
+At the beginning/during your research:
+
+  - Define an organized scheme for data: consider directory structures, file formats, and naming conventions.
+
+Overall, ensure the schema is logical and consistent.
+
+## **Organize Files and Directories**:
+- Group related files together in a clear and hierarchical manner.
+- Use meaningful and descriptive names for files and folders.
+
+## **Consistent Naming Conventions**:
+- Establish and follow a naming convention for all files and directories.
+- Avoid spaces and special characters; use underscores or hyphens instead.
+
+Proper planning of your data structure enhances clarity and usability, making it easier for others to understand and use your dataset.
 
 
