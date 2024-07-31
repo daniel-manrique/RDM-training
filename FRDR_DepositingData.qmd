@@ -24,92 +24,179 @@ bibliography: references.bib
 
 ## Ensuring the data is a aaluable, standalone resource {style="text-align: center;"}
 
-- A brief introduction to FRDR.
-- The significance of submitting well-structured data.
-- Key steps and best practices for depositing data into FRDR.
-
+-   A brief introduction to FRDR.
+-   The significance of submitting well-structured data.
+-   Key steps and best practices for depositing data into FRDR.
 
 ## Understanding FRDR
 
-::: {.r-fit-text}
-
+::: r-fit-text
 **Definition**:
 
 The Federated Research Data Repository (FRDR) is a national platform for Canadian researchers to store, share, and discover research data.
 
 **Goals**:
 
-  - Enhance data discoverability.
-  - Promote open data practices.
-  - Ensure long-term preservation of research data.
-
+-   Enhance data discoverability.
+-   Promote open data practices.
+-   Ensure long-term preservation of research data.
 
 FRDR supports a wide range of disciplines and data types and provides a robust infrastructure for managing and disseminating research data across Canada.
-
 :::
 
 ## Benefits of using FRDR
 
-::: {.r-fit-text}
-
+::: r-fit-text
 **Long-term preservation**:
 
-  - FRDR ensures long-term preservation, accessibility and usability.
+-   FRDR ensures long-term preservation, accessibility and usability.
 
 **Compliance with funding requirements**:
 
-  - Funding [agencies](https://science.gc.ca/site/science/en/interagency-research-funding/policies-and-guidelines/research-data-management/tri-agency-research-data-management-policy-frequently-asked-questions) require data management plans and (soon) open access to data. FRDR helps you comply with these requirements.
+-   Funding [agencies](https://science.gc.ca/site/science/en/interagency-research-funding/policies-and-guidelines/research-data-management/tri-agency-research-data-management-policy-frequently-asked-questions) require data management plans and (soon) open access to data. FRDR helps you comply with these requirements.
 
 **Increased visibility and citation**:
 
-  - Sharing your data increases its visibility and contributes to reproducible science.
+-   Sharing your data increases its visibility and contributes to reproducible science.
 
 **Support for large datasets**:
 
-  - FRDR supports large/heavy datasets, making it an ideal repository for data-intensive research.
-
+-   FRDR supports large/heavy datasets, making it an ideal repository for data-intensive research.
 :::
-
 
 ## Common issues in data repositories
 
-::: {.r-fit-text}
-
+::: r-fit-text
 **Insufficient metadata / contextual information**:
 
-  - Lacking of comprehensive metadata and readme file(s) that explain the context, methodology, and structure of the dataset.
-
+-   Lacking of comprehensive metadata and readme file(s) that explain the context, methodology, and structure of the dataset.
 
 **Lack of structured data**:
 
-  - Disorganized data makes it difficult to understand and reuse the data.
-
+-   Disorganized data makes it difficult to understand and reuse the data.
 
 **Dependency on research articles**:
 
-  - Some datasets require the accompanying research article for full understanding, limiting the dataset's standalone value and usability.
-
+-   Some datasets require the accompanying research article for full understanding, limiting the dataset's standalone value and usability.
 :::
 
+## Datasets at FRDR
 
-# Planning Your Data Structure
+At FRDR, we aim that datasets are standalone objects (independent of research articles) that the research community can explore and reuse.
+
+# 1. Planning Your Data Structure
 
 ## Define a dataset schema:
 
 At the beginning/during your research:
 
-  - Define an organized scheme for data: consider directory structures, file formats, and naming conventions.
+-   Define an organized scheme for data: consider directory structures, file formats, and naming conventions.
 
 Overall, ensure the schema is logical and consistent.
 
-## **Organize Files and Directories**:
-- Group related files together in a clear and hierarchical manner.
-- Use meaningful and descriptive names for files and folders.
+## Diving into a dataset schema
 
-## **Consistent Naming Conventions**:
-- Establish and follow a naming convention for all files and directories.
-- Avoid spaces and special characters; use underscores or hyphens instead.
+Define an organized scheme for data: consider directory structures, file formats, and naming conventions.
 
-Proper planning of your data structure enhances clarity and usability, making it easier for others to understand and use your dataset.
+[TIER 4.0](https://www.projecttier.org/tier-protocol/protocol-4-0/root/) is systemic template that aims at increasing transparency and reproducibility of research data:
+
+You can download a folder structure [here](https://github.com/daniel-manrique/RDM_Training/blob/main/Templates/TIER4.0_DatasetTemplate.zip)
+
+## Points to consider when building the dataset
+
+::: r-fit-text
+**File/folder organization**:
+
+-   Use descriptive names for files and folders.
+-   Group material in a clear and hierarchical manner.
+
+**Consistent Naming Conventions**:
+
+-   Establish a meaningful naming convention for all files and directories.
+-   Avoid spaces and special characters; use underscores instead.
+
+The preceding is crucial to enhance clarity and usability your data.
+:::
+
+## The guiding light: The README
+
+::: r-fit-text
+The (main) *Readme* file is a guide to understand the dataset. It must provide the reader sufficient information to understand its content and allow its reuse.
+
+You can use our \[text\] or \[web\] template to generate a metadata file for deposit in FRDR
+
+Generally, a dataset readme file contains:
+
+-   A **dataset identifier** showing aspects such as title, authors, data collection date, Geographic information.
+-   A **map of files/folders** defining the hierarchy of folders and subfolders and its content. Here, the user can also define the naming conventions for files and folders.
+-   The **methodological information** showcasting the methods for data collection and analysis, and experimental conditions when relevant. *Be aware a dataset should be a stand alone object (apart from the research article)*
+-   A set of **instructions and software** for opening, handling and reproduce research pipelines.
+:::
+
+# 2. Data
+
+##
+
+The data folder must be organized logically and hierarchically according to the characteristics of each dataset.Likewise, the naming conventions should reflect the relationships between the files. 
+
+## Input data
+
+A research integrity and data management best practice is to share the raw (unmodified) data generated by the measuring device The **"Data_Input/"** folder can contain:
+
+**1.  Data files** (stored in subfolders if necessary)
+
+-   Original images (.tiff, czi)
+-   Measuring device output files (txt, csv)
+-   Original registration datasheets (png, csv, xlxs)
 
 
+##
+
+**2.  A metadata file/folder**
+
+This **"Metadata/"** folder contains information about the listed data files to ensure understanding and usability. It may list:
+
+  - Data sources guide: It depicts how the data was generated or its provenance. This may include methodological details and technical metadata. 
+  - Codebooks / data dictionaries: Explain the content of files (mainly .csv tables). They can be [.txt](https://osf.io/9n3gh)  or [.csv-xlxs](https://osf.io/925sh) files.
+  
+  The aim of this resources is to sustain the reuse of the data by providing A faithful and sufficient description of the variables.
+  
+  
+## Analysis data
+
+A **"Data_Analysis/"** folder contains (generally cleaned) files used to generate the research results. Like the input data, this files contain a codebook/data dictionary. Also, these files can be accompanied by a "Data_Appendix" files that showcase basic descriptive statistics or show data distributions.  
+  
+
+## Intermediate data (Optional)
+
+A **"Data_Intermediate/"** folder may contain partially processed data, or preprocessed files that are not raw data but and do not constitute an element results were taken from. Examples of this are images masks are machine learning classifiers generated during an image processing workflow.
+
+
+# 3. Documentaing data transformations: Code and Scripts
+
+Although many scientists may feel more comfortable clicking on software (GUIs), the current research landscape demands that we ensure reproducibility of research findings through the use of scripts and analysis code.
+
+Coding should be considered an essential skill of a scientist, just like other research methods (curigies, patch clamp, flow cytometry, etc). 
+
+## 
+
+The best of all is that the main coding schemes (i.e. R and Python) are free to use and have a strong support community. 
+
+
+## Processing scripts
+
+A "Scripts_Processing" folder may contain scripts/code that prepare (or transform) the raw data (images, tables) for analysis (**Data_Analysis/** folder). Examples of workflows:
+
+  - Dropping variables (subsetting the dataset)
+  - Generating new variables (Perform computations, calculate means, etc.)
+  - Combing different information sources (merging tables or files)
+  
+  Note: At this point, some intermediary files may be generated. Consider saving them into **"Data_Intermediate/"** folder.
+
+In many cases, the Input Data Files you obtain at the beginning of your project will not be formatted and organized in such a way that you can use them for the analysis that generates the results you present in your report.
+
+Accurate naming conventions will secure the link between the input/output data and the processing script. 
+
+
+::: r-fit-text
+:::
