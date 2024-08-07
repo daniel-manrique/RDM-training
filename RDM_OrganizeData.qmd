@@ -1,0 +1,50 @@
+---
+title: "Organizing data"
+
+author: 
+  - name: Daniel Manrique-Castano, Ph.D
+    email: daniel.manrique-castano@alliancecan.ca
+    affiliations:
+      - name: Digital Research Alliance of Canada
+
+date: last-modified
+date-format: full
+
+format: 
+  html:
+    embed-resources: true
+    mermaid:
+      theme: forest
+      
+  revealjs:
+    footer: "Depositing data - Daniel Manrique-Castano, Ph.D"
+    logo: alliance_logo.png
+    theme: white
+    transition: fade
+    slide-number: true
+    show-slide-number: all
+    preview-links: auto
+    mermaid:
+      theme: forest
+      mermaid-format: svg
+    
+filters:
+  - reveal-auto-agenda
+auto-agenda:
+  bullets: numbered
+  heading: Agenda
+  
+  gfm:
+    mermaid-format: svg
+
+css: styles.css
+bibliography: references.bib 
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+```{r}
+1 + 1 
+```

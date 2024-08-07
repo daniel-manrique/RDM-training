@@ -22,7 +22,7 @@ css: styles.css
 bibliography: references.bib 
 ---
 
-## Ensuring the data is a aaluable, standalone resource {style="text-align: center;"}
+## Ensuring the data is a valuable, standalone resource {style="text-align: center;"}
 
 -   A brief introduction to FRDR.
 -   The significance of submitting well-structured data.
@@ -174,9 +174,12 @@ A **"Data_Intermediate/"** folder may contain partially processed data, or prepr
 
 # 3. Documentaing data transformations: Code and Scripts
 
+
+## 
+
 Although many scientists may feel more comfortable clicking on software (GUIs), the current research landscape demands that we ensure reproducibility of research findings through the use of scripts and analysis code.
 
-Coding should be considered an essential skill of a scientist, just like other research methods (curigies, patch clamp, flow cytometry, etc). 
+Coding should be considered an essential skill of a scientist, just like other research methods (surgeries, patch clamp, flow cytometry, etc). 
 
 ## 
 
@@ -185,6 +188,7 @@ The best of all is that the main coding schemes (i.e. R and Python) are free to 
 
 ## Processing scripts
 
+::: r-fit-text
 A "Scripts_Processing" folder may contain scripts/code that prepare (or transform) the raw data (images, tables) for analysis (**Data_Analysis/** folder). Examples of workflows:
 
   - Dropping variables (subsetting the dataset)
@@ -197,6 +201,4 @@ In many cases, the Input Data Files you obtain at the beginning of your project 
 
 Accurate naming conventions will secure the link between the input/output data and the processing script. 
 
-
-::: r-fit-text
 :::
