@@ -1,0 +1,493 @@
+---
+title: "Depositing research data into repositories"
+
+author: 
+  - name: Daniel Manrique-Castano, Ph.D
+    email: daniel.manrique-castano@alliancecan.ca
+    affiliations:
+      - name: Digital Research Alliance of Canada
+
+date: last-modified
+date-format: full
+
+format: 
+  html:
+    embed-resources: true
+    mermaid:
+      theme: forest
+      
+  revealjs:
+    footer: "Depositing data - Daniel Manrique-Castano, Ph.D"
+    logo: alliance_logo.png
+    theme: white
+    transition: fade
+    slide-number: true
+    show-slide-number: all
+    preview-links: auto
+    mermaid:
+      theme: forest
+      mermaid-format: svg
+    
+filters:
+  - reveal-auto-agenda
+auto-agenda:
+  bullets: numbered
+  heading: Agenda
+  
+  gfm:
+    mermaid-format: svg
+
+css: styles.css
+bibliography: references.bib 
+---
+
+# Principles of dataset deposits
+
+## Ensure your data is a valuable, standalone resource
+
+-   {{< bi archive-fill >}} Your dataset should be a [standalone resource]{style="color:green;"}.
+-   {{< bi binoculars-fill >}} Your dataset should be [discoverable]{style="color:green;"} and [understandable]{style="color:green;"}.
+-   {{< bi person-fill >}} Your dataset must be [reusable]{style="color:green;"} by the community.
+
+::: {.callout-caution collapse="true"}
+## Standalone object
+
+Regardless of whether the dataset is linked to a scientific publication, it must be [understandable]{style="color:green;"} and [independently navigable.]{style="color:green;"}
+:::
+
+## Common issues in data repositories
+
+-   {{< bi file-earmark-text-fill >}} Lack of comprehensive [metadata and readme file(s)]{style="color:red;"} that explain the [context, methodology, and structure of the dataset]{style="text-decoration: underline;"}.
+
+-   {{< bi file-earmark-break-fill >}} [Disorganized/unstructured]{style="color:red;"} data that makes it impossible to reuse.
+
+-   {{< bi file-earmark-medical-fill >}} The dataset is treated only as a [supplement]{style="color:red;"} of research articles.
+
+::: {.callout-caution collapse="true"}
+## Please avoid
+
+"Details about the methods to generate the data can be found in [XXXX]{style="color:red;"}"
+:::
+
+## {{< bi share-fill >}} Sharing data is a professional responsability {.center}
+
+The deposition of a dataset in a repository is [NOT ONLY]{style="color:red;"} an exercise to comply with the requirements of funding agencies and journals. It is a an [ethical and professional responsibility]{style="color:green;"} of researchers to ensure reproducible science, and the access and reuse of scientific data.
+
+## Benefits for different stakeholders
+
+### {{< bi people-fill >}} For researchers:
+
+```{mermaid}
+%%| fig-width: 10
+%%| fig-height: 9
+
+flowchart LR
+  A[Efficiency] --> B[Collaborative work] --> C[Reproducibility/impact]
+```
+
+### {{< bi x-diamond-fill >}} For publishers:
+
+```{mermaid}
+%%| fig-width: 10
+%%| fig-height: 9
+
+flowchart LR
+  A[Rigorous peer review] --> B[Validation and reproducibility] --> C[?????]
+```
+
+### {{< bi signpost >}} For funders:
+
+```{mermaid}
+%%| fig-width: 10
+%%| fig-height: 9
+
+flowchart LR
+  A[Transparency] --> B[Accountability] --> C[Return on Investment]
+```
+
+# The Federated Research Data Repository (FRDR)
+
+## Understanding FRDR
+
+::: r-fit-text
+The Federated Research Data Repository (FRDR) is a national platform for Canadian researchers to discover, store, and share research data.
+
+**Our goals**:
+
+-   {{< bi bookmark-check-fill >}} Enhance dataset [discoverability]{style="color:green;"} (in partnership with [Lunaris](https://www.lunaris.ca/)).
+-   {{< bi bookmark-check-fill >}} Promote [open science practices]{style="color:green;"} and the [reuse]{style="color:green;"} of research data.
+-   {{< bi bookmark-check-fill >}} Ensure [long-term preservation]{style="color:green;"} of valuable research data.
+:::
+
+::: callout-tip
+## FRDR is for canadian researchers
+
+FRDR supports a [wide range of disciplines]{style="color:green;"} and data types, providing a robust infrastructure for [managing and disseminating]{style="color:green;"} research data across Canada.
+:::
+
+## Benefits of using FRDR
+
+::: r-fit-text
+-   {{< bi bookmark-plus-fill >}} FRDR ensures [long-term preservation]{style="color:green;"}, [accessibility]{style="color:green;"} and [usability]{style="color:green;"} of datasets through its curation and preservation team.
+
+-   {{< bi bookmark-plus-fill >}} FRDR supports requirements from Funding [agencies](https://science.gc.ca/site/science/en/interagency-research-funding/policies-and-guidelines/research-data-management/tri-agency-research-data-management-policy-frequently-asked-questions) associated with open access to data (and [research data management plans](https://dmp-pgd.ca/)).
+
+-   {{< bi bookmark-plus-fill >}} Promotes [dataset visibility]{style="color:green;"} and [reuse]{style="color:green;"} across a wide range of discplines.
+
+-   {{< bi bookmark-plus-fill >}} FRDR supports [large datasets]{style="color:green;"}, making it an ideal repository for data-intensive research.
+
+-   {{< bi bookmark-plus-fill >}} FRDR supports researchers in best [data management practices]{style="color:green;"}.
+:::
+
+::: callout-tip
+## FRDR supports researchers and institutions
+
+FRDR has competent staff to accompany researchers and institutions, ensuring that datasets are valuable and comply with [FAIR](https://www.go-fair.org/fair-principles/) principles.
+:::
+
+# FAIR model
+
+## {{< bi database-fill >}} Datasets as standalone, reusable objects
+
+At FRDR, we aim that datasets are [standalone objects]{style="color:green;"} (independent of research articles) with potential [social, research or educational uses]{style="text-decoration: underline;"}.
+
+::: {style="text-align: center;font-size: 50%"}
+![Image by https://biosistemika.com/](images/FAIR_Principles.png){fig-align="center" width="500" height="250"}
+:::
+
+## FAIR principles {.smaller}
+
+:::: {layout-ncol="2"}
+::: {#first-column}
+{{< bi search >}} [Findable]{style="color:green;"}
+
+-   {{< bi person >}} Persistent identifiers\
+-   {{< bi file-earmark-pdf-fill >}} Rich metadata
+-   {{< bi database-fill >}} Indexed in a searchable resource
+
+{{< bi hdd-fill >}} [Accessible]{style="color:green;"}
+
+-   {{< bi file-earmark-pdf-fill >}} Open files formats\
+-   {{< bi cpu-fill >}} Software requirements
+:::
+
+::: {#second-column}
+{{< bi diagram-2-fill >}} [Interoperable]{style="color:green;"}
+
+-   {{< bi globe >}} Formal, standardized, shared language
+-   {{< bi front >}} Reference to other (meta)data
+
+{{< bi recycle >}} [Reusable]{style="color:green;"}
+
+-   {{< bi geo-alt-fill >}} Adequate context and detailed provenance
+-   {{< bi file-earmark-font-fill >}} Accurate/descriptive attributes
+-   {{< bi receipt >}} Clear licence and usage permissions
+:::
+::::
+
+# General guidelines for dataset deposits
+
+## {{< bi text-center >}} General guidelines for sharing data {.center}
+
+1.  {{< bi diagram-2-fill >}} Define a dataset [schema/road]{style="color:green;"}
+2.  {{< bi file-earmark-pdf-fill >}} Write a [readme]{style="color:green;"}/metadata file
+3.  {{< bi folder-fill >}} Organize [data]{style="color:green;"} folders and scripts/[codes]{style="color:green;"} folders
+
+## 1. Define a dataset schema/road
+
+At the [beginning]{style="color:green;"} (optimal) or [during]{style="color:green;"} (not bad) your research, define an organized scheme for data.
+
+::: callout-tip
+## Think about
+
+-   {{< bi folder-fill >}} Folders/[directory structures]{style="color:green;"}
+-   {{< bi filetype-tiff >}} Think about [file types/formats]{style="color:green;"}
+-   {{< bi file-earmark-font-fill >}} Establish logical/descriptive [naming conventions]{style="color:green;"}
+:::
+
+Overall, ensure the schema is [logical and consistent]{style="color:green;"}. An external user must be able to understand the directory structure.
+
+## 2. The guiding light of a dataset: the README
+
+The (main) {{< bi file-earmark-medical-fill>}} [readme]{style="color:green;"} file is a guide to [understand the dataset]{style="color:green;"} and allow its reuse or execution.
+
+::: {layout-ncol="2"}
+<div>
+
+::: {style="text-align: center; font-size: 50%"}
+![From https://github.com/twbs/bootstrap-rubygem](images/readme.webp){fig-align="center" width="500" height="300"}
+:::
+
+</div>
+
+<div>
+
+::: {style="font-size: 80%;"}
+FRDR users can use our \[text\] or \[web\] template to generate a [readme file]{style="color:green;"} for deposit into FRDR.
+
+Additional resources are:\
+- [Creating a README file](https://blog.datadryad.org/2023/10/18/for-authors-creating-a-readme-for-rapid-data-publication/)\
+- [Readme.so](https://readme.so/)\
+- [Readme.ai](https://readme-ai.streamlit.app/)
+:::
+
+</div>
+:::
+
+## Contents of a readme file
+
+::: r-fit-text
+Generally, a dataset readme file showcases:
+
+-   {{< bi database-fill >}} A [dataset identifier]{style="color:green;"} showing aspects such as title, authors, data collection date, Geographic information.
+-   {{< bi folder-fill >}} A [map of files/folders]{style="color:green;"} defining the hierarchy of folders and subfolders and its content. Here, the user can also define the naming conventions for files and folders.
+-   {{< bi gear-fill >}} The [methodological information]{style="color:green;"} showcasing the methods for data collection/generation, analysis, and experimental conditions.
+
+::: {.callout-caution collapse="true"}
+## To refresh your memory
+
+The dataset is a standalone object (apart from the research article). Methods and instruments for data collection [MUST NOT]{style="color:red;"} be relegated to the research article.
+:::
+
+-   {{< bi sd-card-fill >}} A set of [instructions and software]{style="color:green;"} for opening, handling and reproduce research pipelines.
+
+-   {{< bi credit-card-2-front-fill >}} [Sharing and access information]{style="color:green;"} detailing permissions and conditions of use.
+:::
+
+## 3. Organize dataset folders
+
+And [organized scheme]{style="color:green;"} is the {{< bi key-fill >}} key to understand data structure.
+
+::: {layout-ncol="2"}
+<div>
+
+::: {style="text-align: center;font-size: 50%"}
+![From pexels.com](images/Matryoska.jpeg)
+:::
+
+</div>
+
+<div>
+
+::: {style="text-align: center;font-size: 50%"}
+![File structure](images/files.png){width="75%"}
+:::
+
+</div>
+:::
+
+## {{< bi diagram-2-fill >}} Diving into the folder tree {.center}
+
+::: {layout-ncol="2"}
+<div>
+
+::: callout-tip
+{{< bi diagram-3-fill >}} Plan/define [directory structures, file formats, and naming conventions]{style="text-decoration: underline;"}.
+:::
+
+For example, [TIER 4.0](https://www.projecttier.org/tier-protocol/protocol-4-0/root/) is [systemic template]{style="color:green;"} to standardize and increasing transparency/reproducibility of research data. The user can [download](https://github.com/daniel-manrique/RDM_Training/blob/main/Templates/TIER4.0_DatasetTemplate.zip) a folder structure and adapt it to specific cases.
+
+</div>
+
+<div>
+
+::: {style="text-align: center;font-size: 50%"}
+![Folder tree](images/tier.png){width="45%"}
+:::
+
+</div>
+:::
+
+## {{< bi diagram-3-fill >}} Organizing a data folder {.center}
+
+The [data]{style="color:green;"} {{< bi folder-fill >}} must be organized [logically and hierarchically]{style="color:green;"} according to the characteristics of each dataset.
+
+## {{< bi folder-fill >}} Input data
+
+Sharing the [input/raw data]{style="color:green;"} is a research integrity and data management best practice. The [Data_Input/]{style="color:orange;"} {{< bi folder-fill >}} can contain:
+
+::: {layout-ncol="2"}
+<div>
+
+### a) [Data files]{style="color:magenta;"} (stored in subfolders if necessary)
+
+-   Original [images]{style="color:green;"} (.tiff, .czi)
+-   Measuring device [output files]{style="color:green;"} (.txt, .csv)
+-   Original registration [datasheets]{style="color:green;"} (.png, .csv, .xlxs)
+
+</div>
+
+<div>
+
+::: {style="text-align: center;font-size: 50%"}
+![Folder tree](images/data_raw.png){width="90%"}
+:::
+
+</div>
+:::
+
+## 
+
+### b) A [metadata]{style="color:magenta;"} file/folder {{< bi folder-fill >}}
+
+This [Metadata/]{style="color:orange;"} {{< bi folder-fill >}} contains information about the listed data files to ensure understanding and usability. It may list:
+
+-   [Data sources guide:]{style="color:green;"} It depicts how the data was [generated]{style="text-decoration: underline;"}. or its [provenance]{style="text-decoration: underline;"}.. This may include [methodological details]{style="text-decoration: underline;"}. and [technical metadata]{style="text-decoration: underline;"}..
+-   [Codebooks / data dictionaries:]{style="color:green;"} Explain the [content of files]{style="text-decoration: underline;"}. (mainly .csv tables). They can be [.txt](https://osf.io/9n3gh) or [.csv-xlxs](https://osf.io/925sh) files.
+
+The aim of this resources is to [sustain the reuse]{style="color:green;"} of the data by providing a faithful and [sufficient description]{style="color:green;"} of the variables.
+
+## {{< bi folder-fill >}} Analysis data {.center}
+
+A [Data_Analysis/]{style="color:orange;"} {{< bi folder-fill >}} contains [processed files]{style="color:green;"}, those used to generate the research results.
+
+::: {layout-ncol="2"}
+<div>
+
+Like the input data, this files contain a [codebook/data dictionary]{style="color:green;"}. Also, these files can be accompanied by a [Data_Appendix]{style="color:green;"} files that showcase basic descriptive statistics or show data distributions.
+
+</div>
+
+<div>
+
+::: {style="text-align: center;font-size: 50%"}
+![Folder tree](images/data_processed.png){width="90%"}
+:::
+
+</div>
+:::
+
+## {{< bi folder-fill >}} Intermediate data (Optional) {.center}
+
+A [Data_Intermediate/]{style="color:orange;"} {{< bi folder-fill >}} may contain mid-step processed data, or pre-processed files as part of an analysis pipeline. Examples may be images 'masks' are machine learning classifiers used to further operate with images.
+
+## {{< bi code-square >}} Scripting is the way {.smaller}
+
+Although most scientists may feel more comfortable using clicking software (GUIs), the current research landscape demands to ensure reproducibility of research findings through the use of scripts and (analysis) code.
+
+::: callout-tip
+{{< bi code-square >}} Coding should be considered an [essential skill]{style="color:green;"} , just like other methods such as surgeries, patch clamp, flow cytometry).
+:::
+
+![](images/theway.png){fig-align="center"}
+
+## {{< bi folder-fill >}} Processing scripts
+
+::: r-fit-text
+::: {.callout-caution collapse="true"}
+The data you obtain from measurements may not be formatted and organized to analyze it and generate results.
+:::
+
+A [Scripts_Processing]{style="color:orange;"} {{< bi folder-fill >}} may contain scripts/code that prepare (or transform) the raw data (images, tables) for analysis [Data_Analysis/]{style="color:orange;"} {{< bi folder-fill >}}.
+
+[Examples of workflows:]{style="text-decoration: underline;"}
+
+-   Dropping variables (subsetting the dataset)
+-   Generating new variables (Perform computations, calculate means, etc.)
+-   Combing different information sources (merging tables or files)
+
+::: callout-tip
+Yo can consider saving the generated intermediary files into the [Data_Intermediate/]{style="color:orange;"} {{< bi folder-fill >}}.
+:::
+:::
+
+## {{< bi lightbulb-fill >}} Keep in mind {.center}
+
+You will generate several processing scripts. [Logical naming conventions]{style="color:green;"} are the key to link the input/output data with the processing scripts.
+
+## {{< bi folder-fill >}} Analysis scripts {.smaller}
+
+::: {layout-ncol="2"}
+<div>
+
+The [Scripts_Analisys]{style="color:orange;"} {{< bi folder-fill >}} host scripts/code to generate results that may be in the form of:
+
+-   {{< bi card-image >}} Images
+-   {{< bi file-bar-graph-fill >}} Figures
+-   {{< bi table >}} Tables
+-   {{< bi calculator-fill >}} Statistical models
+
+</div>
+
+<div>
+
+::: {style="text-align: center;font-size: 50%"}
+![Folder tree](images/scripts_processing.png){width="90%"}
+:::
+
+</div>
+:::
+
+::: callout-tip
+Generally speaking, this scripts import and handle the [Analysis data]{style="color:orange;"}.
+:::
+
+## {{< bi code-slash >}} A master script? {.center}
+
+The [Scripts/]{style="color:orange;"} {{< bi folder-fill >}} can also contain a [master script]{style="color:green;"} that executes all other scripts, forming a fully automated pipeline.
+
+## {{< bi folder-fill >}} The output folder
+
+::: {layout-ncol="2"}
+<div>
+
+The [Output/]{style="color:orange;"} {{< bi folder-fill >}} contains subfolders storing the files generated by the analysis scripts in the form of:
+
+-   {{< bi card-image >}} Images
+-   {{< bi file-bar-graph-fill >}} Figures
+-   {{< bi table >}} Tables
+-   {{< bi calculator-fill >}} Statistical models
+
+</div>
+
+<div>
+
+::: {style="text-align: center;font-size: 50%"}
+![Folder tree](images/output.png){width="100%"}
+:::
+
+</div>
+:::
+
+## {{< bi lightbulb-fill >}} Commitment with reproducibility {.center}
+
+Sharing the output resulting from computations/code is one of the best better commitments to [open and reproducible science]{style="color:green;"}. It is also a way to preserve material for later use in an organized manner.
+
+# Data submission checklist
+
+## {{< bi card-checklist >}} Submitting your data to a repository {.smaller}
+
+When submitting your data to a repository (FRDR), ensure its meets these characteristics:
+
+1.  {{< bi diagram-2-fill >}} [Your folders and files are organized in a clear and structured way]{style="color:green;"} (understandable for the community): Use [standardized file formats]{style="color:green;"} (e.g., CSV, TIFF) and check for consistency in [naming conventions]{style="color:green;"}.
+
+2.  {{< bi file-earmark-text-fill >}} [The metadata/readme is as complete as possible]{style="color:green;"} and allow to understand the dataset as standalone object, providing data [collection methods, processing steps, and relevant context]{style="text-decoration: underline;"}.
+
+3.  {{< bi file-person-fill >}} [Verify independent usability]{style="color:green;"}: data must be [complete and understandable]{style="text-decoration: underline;"} (Include any necessary instructions for data interpretation) without needing the accompanying research article.
+
+## In summary {.center}
+
+Be aware that the datatset is a research object to [serve the public and the scientific community]{style="color:green;"}, and that can be used (and cited) [independently]{style="color:green;"} of the research article.
+
+[Better yet, Think about articles as supplements to your dataset!!!]{style="color:green;"}
+
+------------------------------------------------------------------------
+
+## Resources and support {.smaller}
+
+### Supporting material
+
+-   XXX
+-   XXX
+
+### Support Services:
+
+-   Contact our team for assistance with data preparation and submission.
+-   Email: daniel.manrique-castano\@alliancecan.ca
+
+## Useful Links:
+
+-   XXX
+-   XXX
+
+We are here to help you ensure your data is well-prepared and can be effectively shared with the research community.

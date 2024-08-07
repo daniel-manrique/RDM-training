@@ -1,6 +1,5 @@
 ---
-title: "Organizing data"
-
+title: "Organizing research data for management and sharing"
 author: 
   - name: Daniel Manrique-Castano, Ph.D
     email: daniel.manrique-castano@alliancecan.ca
@@ -17,7 +16,7 @@ format:
       theme: forest
       
   revealjs:
-    footer: "Depositing data - Daniel Manrique-Castano, Ph.D"
+    footer: "Organizing research data - Daniel Manrique-Castano, Ph.D"
     logo: alliance_logo.png
     theme: white
     transition: fade
@@ -41,10 +40,108 @@ css: styles.css
 bibliography: references.bib 
 ---
 
-## Quarto
+# Basic principles for organizing research data
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+## Understanding a dataset
 
-```{r}
-1 + 1 
-```
+::::: {layout-ncol="2"}
+:::: {#first-column}
+Research data comes in many tastes and shapes ([tables]{style="color:orange;"}, [images]{style="color:magenta;"}, [videos]{style="color:red;"}, [text]{style="color:gray;"}).
+
+Whatever the case, the [structure]{style="color:green;"} of the data must be [understandable]{style="color:green;"} by others than the author.
+::::
+
+:::: {#second-column}
+::: {style="text-align: center; font-size: 70%"}
+![Most of the time others do not understand data](images/DificultData.webp){fig-align="center" width="500" height="500"}
+:::
+::::
+:::::
+
+## Best practices for organizing a dataset {.smaller}
+
+1.  Use consistent [naming conventions]{style="color:green;"} that fairly describe the content and allow interrelation between files:
+
+-   {{< bi card-image>}} [A1.tif]{style="color:red;"} {{< bi arrow-right>}} [Exp_MouseID_Day_Condition_Marker.tif]{style="color:green;"}
+-   {{< bi file-earmark-spreadsheet>}} [CellsTable.xls]{style="color:red;"} {{< bi arrow-right>}} [Widefield_5x_Cortex_NeuN_Counts.csv]{style="color:green;"}
+
+2.  Use [proper, accessible]{style="color:green;"} file formats to improve accesibility:
+
+-   {{< bi card-image>}} [.tif]{style="color:green;"} for images (preserve the metadata).
+-   {{< bi file-earmark-spreadsheet>}} [.csv]{style="color:green;"} for tables (non-proprietary).
+-   {{< bi file-bar-graph-fill>}} [.png or .svg]{style="color:green;"} for graphs (preserves quality).
+-   {{< bi file-earmark-pdf-fill>}} [.txt or .pdf]{style="color:green;"} for documentation (non-proprietary).
+
+## Best practices for organizing a dataset
+
+3.  Use [comprehensive metadata]{style="color:green;"} (readme/codebook) to describe and contextualize the data.
+
+4.  Implement [coding pipelines]{style="color:green;"} (R, Python) to transform the [raw data]{style="color:red;"} into [analysis data]{style="color:magenta;"} to extract information and analyze it.
+
+::: callout-tip
+At the end, your dataset must be composed by organized, clean, and validated data.
+:::
+
+# Working with tabular data
+
+## {{< bi file-earmark-spreadsheet>}} Data tables are the core of scientific data {.center}
+
+Despite being the most common file type (.xls) for recording/storing data, tables are the most poorly organized and usable objects in research.
+
+::::: {layout-ncol="2"}
+
+:::: {#first-column}
+::: {style="text-align: center;font-size: 50%"}
+![from https://dansteer.wordpress.com/](images/BadTable1.webp){fig-align="center" width="400" height="200"}
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: center;font-size: 50%"}
+![from https://dansteer.wordpress.com/](images/BadTable1.webp){fig-align="center" width="400" height="200"}
+:::
+::::
+:::::
+
+## More examples...{.center}
+
+::::: {layout-ncol="2"}
+
+:::: {#first-column}
+::: {style="text-align: center;font-size: 50%"}
+![Zhao et al. (2024). Nature Comm. DOI: 10.1038/s41467-024-50836-6](images/BadTable2_Zhao(2024)_NatureComm.png){fig-align="center" width="400" height="400"}
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: center;font-size: 50%"}
+![Balinda et al. (2024). Nature Comm. DOI: doi.org/10.1038/s41467-024-50558-9](images/BadTable2_Balinda(2024)_NatureComm.png){fig-align="center" width="400" height="400"}
+:::
+::::
+:::::
+
+## {{< bi file-earmark-spreadsheet>}} Featuring a data table {.center}
+
+::::: {layout-ncol="2"}
+
+:::: {#first-column}
+::: {style="text-align: center;font-size: 60%"}
+![A typical long-format data table](images/GoodTable.png){fig-align="left" width="500" height="300"}
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: center;font-size: 60%"}
+### Columns
+- {{< bi dropbox>}} [Variables collected]{style="color:green;"} with an instrument/software: intensity, area, number of cells, etc.
+- {{< bi device-ssd-fill>}} [Variables created:]{style="color:green;"} proportions, ratios, etc.
+- {{< bi calculator-fill>}} [Summary variables:]{style="color:green;"} sum scores, means, sd, etc. (Not in the same table)
+- {{< bi file-earmark-person-fill>}} [Identifier variables]{style="color:green;"} that you create to identify your samples (animal ID, Time point, condition).
+
+### Rows
+
+- {{< bi clipboard-data-fill>}} [Variable values]{style="color:green;"}: original or codified numeric or categorical entries for each column.
+
+:::
+::::
+:::::
