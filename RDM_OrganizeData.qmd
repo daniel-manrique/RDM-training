@@ -86,7 +86,7 @@ At the end, your dataset must be composed by organized, clean, and validated dat
 
 ## {{< bi file-earmark-spreadsheet>}} Data tables are the core of scientific data {.center}
 
-Despite being the most common file type (.xls) for recording/storing data, tables are the most poorly organized and usable objects in research.
+Despite being the most common file type (.xls) for recording/storing data, tables are the most [poorly organized and unusable]{style="color:red;"} objects in research.
 
 ::::: {layout-ncol="2"}
 
@@ -103,7 +103,7 @@ Despite being the most common file type (.xls) for recording/storing data, table
 ::::
 :::::
 
-## More examples...{.center}
+## Examples from published research{.center}
 
 ::::: {layout-ncol="2"}
 
@@ -120,12 +120,46 @@ Despite being the most common file type (.xls) for recording/storing data, table
 ::::
 :::::
 
-## {{< bi file-earmark-spreadsheet>}} Featuring a data table {.center}
+## Examples from Crystal Lewis (2024) {.center}
 
 ::::: {layout-ncol="2"}
 
 :::: {#first-column}
-::: {style="text-align: center;font-size: 60%"}
+::: {style="text-align: center;font-size: 50%"}
+![Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-3.PNG)
+
+![Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-4.PNG)
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: center;font-size: 50%"}
+![Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-5.PNG)
+
+![Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-6.PNG)
+:::
+::::
+:::::
+
+## Examples from Crystal Lewis (2024)
+
+
+
+::: {style="text-align: center;font-size: 50%"}
+![Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-7.PNG){fig-align="center" width="500" height="200"}
+:::
+
+::: {style="text-align: center;font-size: 50%"}
+![Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-8.PNG){fig-align="center" width="600" height="200"}
+:::
+
+
+## {{< bi file-earmark-spreadsheet>}} Featuring a data table{.center} 
+
+::::: {layout-ncol="2" layout-valign="center"}
+
+:::: {#first-column}
+::: {style="text-align: center;font-size: 60%"} 
 ![A typical long-format data table](images/GoodTable.png){fig-align="left" width="500" height="300"}
 :::
 ::::
@@ -143,5 +177,111 @@ Despite being the most common file type (.xls) for recording/storing data, table
 - {{< bi clipboard-data-fill>}} [Variable values]{style="color:green;"}: original or codified numeric or categorical entries for each column.
 
 :::
+::::
+:::::
+
+## {{< bi file-earmark-spreadsheet>}} Wide and long table formats{.center}
+
+::::: {layout-ncol="2" layout-valign="center"}
+
+:::: {#first-column}
+::: {style="text-align: center;font-size: 60%"} 
+![A typical wide-format data table, from Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-14.PNG){fig-align="left" width="600" height="350"}
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: left;font-size: 80%"} 
+In a table with [wide format]{style="color:green;"} {{< bi file-earmark-person-fill>}} [Each subject]{style="text-decoration: underline;"} occupies a [single row]{style="color:green;"} and has its associated variables in different columns:[subject]{style="color:orange;"}, [Id1, Id2,]{style="color:red;"}, [Var1, Var2]{style="color:gray;"} [Time 1, Time2, Time3]{style="color:magenta;"}.
+:::
+
+::: callout-tip
+This format is useful when different columns are [predictors]{style="color:green;"} (in a regression {{< bi bar-chart-line-fill>}}) of another set of columns. Example:   
+
+[Cells_3D]{style="color:green;"} ~ [Cells_2D + Cells_3D]{style="color:magenta;"}.
+::: 
+
+::::
+:::::
+
+## {{< bi file-earmark-spreadsheet>}} Wide and long table formats 
+::::: {layout-ncol="2" layout-valign="center"}
+
+:::: {#first-column}
+::: {style="text-align: center;font-size: 60%"} 
+![A typical wide-format data table, from Lewis (2024). DOI: 10.1201/9781032622835-3](images/Lewis_fig3-15.PNG){fig-align="left" width="600" height="300"}
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: left;font-size: 65%"} 
+In a table with [long format]{style="color:green;"} {{< bi file-earmark-person-fill>}} [Each subject]{style="text-decoration: underline;"} occupies [various rows]{style="color:green;"} and has its associated variables in [different rows:]{style="text-decoration: underline;"}    
+
+[subject]{style="color:orange;"}(repeat), [Id1, Id2 ]{style="color:red;"}(repeat), [Time (1, 2 , 3)]{style="color:magenta;"}.
+:::
+
+::: {.callout-tip .smaller}
+This format is useful when analyzing [time-lapse data]{style="color:green;"}, grouping different condition variables in a single column. [Example:]{style="text-decoration: underline;"}   
+
+[Cells]{style="color:green;"} ~ [TimePoint (1D, 2D, 3D)]{style="color:magenta;"}. 
+
+Long-format is usually more [efficient and suitable as a first choice]{style="color:green;"}.
+::: 
+
+::::
+:::::
+
+## {{< bi balloon-heart-fill>}} The best of all... {.center}  
+
+You can use R and [Quarto](https://quarto.org/) (or Python) to convert from long to wide table format, or visceversa. Check this [tutorial]{style="color:blue;"}.   
+
+::: {style="text-align: center;font-size: 60%"} 
+![Long to wide format (https://tavareshugo.github.io/)](images/LongToWide.PNG){fig-align="center" width="600" height="350"}
+:::
+
+
+## {{< bi file-earmark-font-fill>}} Provide metadata (readme file){.smaller}   
+
+Your tables are [unintelligible]{style="color:red;"} if they are not accompanied by metadata [describing the content]{style="color:green;"}. Desirable (open) formats for readme files: [.txt, .pdf, .md]{style="color:magenta;"} (markdown). 
+
+::: {style="text-align: center;font-size: 90%"} 
+![Example of a readme file](images/Dataset_readme.png){fig-align="center" width="600" height="400"}
+:::
+
+# Working with images
+
+## {{< bi card-image>}} Principles of working with images{.center} 
+
+::::: {layout-ncol="2" layout-valign="center"}
+
+:::: {#first-column}
+::: {style="text-align: center;font-size: 60%"} 
+![Manrique-Castano et al. (2024). DOI: DOI 10.17605/OSF.IO/3VG8J](images/BrainStaining.png){fig-align="left" width="500" height="300"}
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: center;font-size: 60%"}
+- {{< bi card-image>}} When possible, convert [propietary files]{style="color:red;"} (i.e .czi) to [open formats]{style="color:green;"} with no compression (.tif).
+- {{< bi code-square>}} Use [FIJI, Python]{style="color:green;"} or related [coding/scripting software]{style="color:green;"} (prefered) to document image transformations (resize. background substraction, etc.). 
+- {{< bi code-square>}} Extract information/perform analysis using [coding/scripting software]{style="color:green;"} to ensure reproducibility. Please [avoid manual counts/analysis]{style="color:red;"}.
+- {{< bi gear-fill>}} Share [technical]{style="color:green;"} (acquisition parameters) and [descriptive]{style="color:green;"} (context and content) [metadata]{style="color:green;"} along with the images.
+:::
+::::
+:::::
+
+
+## {{< bi card-image>}} Transform images to open formats 
+
+::::: {layout-ncol="2" layout-valign="center"}
+
+:::: {#first-column}
+::: {style="text-align: center;font-size: 60%"} 
+![Manrique-Castano et al. (2024). DOI: DOI 10.17605/OSF.IO/3VG8J](images/Transform_czi-tif.png){fig-align="left" width="500" height="300"}
+:::
+::::
+
+:::: {#second-column}
+You can easy transform your propietary files (.czi) to open formats (.tif) using i.e [FIJI]{style="color:red;"} [scripts]
 ::::
 :::::

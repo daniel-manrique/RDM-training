@@ -6,3 +6,7 @@
   text-align: left;
   font-size: 40px;
 }
+
+.callout.callout-style-default.my-callout .callout-body {
+    font-size: 5.0rem;
+}
