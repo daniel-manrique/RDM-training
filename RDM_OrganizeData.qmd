@@ -1,5 +1,7 @@
 ---
-title: "Organizing research data for management and sharing"
+title: "Organize and handle research data"
+subtitle: "A primer for scientists"
+
 author: 
   - name: Daniel Manrique-Castano, Ph.D
     email: daniel.manrique-castano@alliancecan.ca
@@ -16,7 +18,7 @@ format:
       theme: forest
       
   revealjs:
-    footer: "Organizing research data - Daniel Manrique-Castano, Ph.D"
+    footer: "Organize and handle research data - Daniel Manrique-Castano, Ph.D"
     logo: alliance_logo.png
     theme: white
     transition: fade
@@ -40,7 +42,7 @@ css: styles.css
 bibliography: references.bib 
 ---
 
-# Basic principles for organizing research data
+# Basic principles for handling research data
 
 ## Understanding a dataset
 
@@ -263,9 +265,9 @@ Your tables are [unintelligible]{style="color:red;"} if they are not accompanied
 :::: {#second-column}
 ::: {style="text-align: center;font-size: 60%"}
 - {{< bi card-image>}} When possible, convert [propietary files]{style="color:red;"} (i.e .czi) to [open formats]{style="color:green;"} with no compression (.tif).
+- {{< bi gear-fill>}} Share [technical]{style="color:green;"} (acquisition parameters) and [descriptive]{style="color:green;"} (context and content) [metadata]{style="color:green;"} along with the images.
 - {{< bi code-square>}} Use [FIJI, Python]{style="color:green;"} or related [coding/scripting software]{style="color:green;"} (prefered) to document image transformations (resize. background substraction, etc.). 
 - {{< bi code-square>}} Extract information/perform analysis using [coding/scripting software]{style="color:green;"} to ensure reproducibility. Please [avoid manual counts/analysis]{style="color:red;"}.
-- {{< bi gear-fill>}} Share [technical]{style="color:green;"} (acquisition parameters) and [descriptive]{style="color:green;"} (context and content) [metadata]{style="color:green;"} along with the images.
 :::
 ::::
 :::::
@@ -277,11 +279,404 @@ Your tables are [unintelligible]{style="color:red;"} if they are not accompanied
 
 :::: {#first-column}
 ::: {style="text-align: center;font-size: 60%"} 
-![Manrique-Castano et al. (2024). DOI: DOI 10.17605/OSF.IO/3VG8J](images/Transform_czi-tif.png){fig-align="left" width="500" height="300"}
+![FIJI script to save .czi images as tiff. From Manrique-Castano et al. (2024). DOI: DOI 10.17605/OSF.IO/3VG8J](images/Transform_czi-tif.png){fig-align="left" width="500" height="300"}
 :::
 ::::
 
 :::: {#second-column}
-You can easy transform your propietary files (.czi) to open formats (.tif) using i.e [FIJI]{style="color:red;"} [scripts]
+You can easy [transform]{style="color:green;"} your propietary files (.czi) to open formats (.tif) using i.e [FIJI]{style="color:green;"} [scripts](https://github.com/daniel-manrique/RDM_DataTraining/blob/main/resources/Transform_czi-tif.ijm).
+
+::: {.callout-caution}
+Saving .czi images as tif using FIJI will result in [metadata loss]{style="color:red;"} (archived within the .czi file). 
+::: 
+
 ::::
 :::::
+
+## Keep track of the metadata{.smaller} 
+
+::::: {layout-ncol="2"}
+
+:::: {#first-column}
+
+### {{< bi gear-fill>}} [Technical]{style="color:gray;"}
+
+Get the technical metadata from the .czi file as [.txt or .csv]{style="color:green;"} files (often for all images).  
+
+::: {style="text-align: center;font-size: 70%"} 
+![Example of technical metadata in FIJI: *image -> show info*](images/TechnicalMetadata_czi.png){fig-align="center" width="300" height="300"}
+:::
+::::
+
+:::: {#second-column}
+
+### {{< bi file-earmark-pdf-fill>}} [Descriptive]{style="color:orange;"}
+
+Generate a descritive readme explaining to understand the [provenance and naming conventions]{style="color:green;"} of the images.
+
+::: {style="text-align: center;font-size: 70%"} 
+![Example of [descriptive metadata](https://github.com/daniel-manrique/RDM_DataTraining/blob/main/resources/readme_images.txt)](images/DescriptiveMetadata_czi.png){fig-align="center" width="450" height="350"}
+:::
+
+::::
+:::::
+
+# Sharing data handling/analysis pipelines
+
+## A worrying research landscape
+
+We live in a pandemic of [fraudulent and irreproducible science]{style="color:red;"}. 
+
+::::: {layout-ncol="2" layout-valign="center"}
+
+:::: {#first-column}
+::: {style="text-align: center;font-size: 60%"} 
+![Increase in retracted articles](images/Economist_Retractions.png){fig-align="center" width="450" height="450"}
+:::
+::::
+
+:::: {#second-column}
+:::{style="text-align: left;font-size: 70%"}
+This worrying landscape demands that as [integral researchers committed to best scientific practices]{style="color:green;"}, we share all [data handling and analysis procedures]{style="color:magenta;"} {{< bi code-square>}}. 
+:::
+
+::: {.callout-tip}
+Fortunately, the optimal ways to do this are free and have tremendous support from a[growing community]{style="color:magenta;"}.
+::: 
+
+::::
+:::::
+
+
+## Global supporting communities {.center}
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+::: {style="text-align: center;font-size: 100%"} 
+![[R Ladies](https://github.com/rladies)](images/Rladies_Logo.png){fig-align="center" width="300" height="300"}
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: center;font-size: 100%"} 
+![[Py Ladies](https://github.com/pyladies)](images/pyladies_logo.png){fig-align="center" width="300" height="300"}
+:::
+::::
+:::::
+
+## Partners to handle analysis pipelines{.center}
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+
+### {{< bi code-square>}} R-studio/Quarto (R + Python)
+::: {style="text-align: center;font-size: 100%"} 
+![R-studio/quarto screen](images/R-studio_Screen.jpg){fig-align="center" width="500" height="300"}
+:::
+::::
+
+:::: {#second-column}
+### {{< bi github>}} GitHub (Version control)
+::: {style="text-align: center;font-size: 100%"} 
+![GitHub screen](images/GitHub_screen.jpg){fig-align="center" width="500" height="300"}
+:::
+::::
+:::::
+
+
+## With R-studio (R and Python) you can {.center}
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+
+### {{< bi code-square>}} R-studio/Quarto (R + Python)
+::: {style="text-align: center;font-size: 100%"} 
+![R-studio/quarto screen](images/R-studio_Screen.jpg){fig-align="center" width="500" height="300"}
+:::
+::::
+
+:::: {#second-column}
+:::{style="text-align: left;font-size: 75%"}
+- {{< bi file-earmark-spreadsheet-fill>}} Handle [data tables and variables](https://github.com/elalilab/Stroke_PDGFR-B_Reactivity/blob/main/Widefield_10x_ROIs_CD31-Pdgfrb_Coloc.qmd) using the R [Tidyverse](https://www.tidyverse.org/).  
+
+- {{< bi images>}} Analyze [images](https://github.com/elalilab/Stroke_PDGFR-B_Reactivity/blob/main/Confocal_40x_ROIs_Pdgfrb_Morpho_BatchScript.qmd) using Python [skimage](https://scikit-image.org/). 
+
+- {{< bi wallet-fill>}} Process [Flow cytometry](https://github.com/elalilab/Stroke_PDGFR-B_Reactivity/blob/main/FlowCytometry_Pdgfrb_Processing.qmd) files/data using R [FlowCore](https://bioconductor.org/packages/release/bioc/html/flowCore.html) from [BioConductor](https://bioconductor.org/).
+
+- {{< bi bandaid>}} Analyze [RNS-seq](https://www.bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html) data using R [DESeq2](https://bioconductor.org/packages/release/bioc/html/DESeq2.html) from [BioConductor](https://bioconductor.org/).
+
+- {{< bi bar-chart-line-fill>}} Perform state-of-the-art [statistical modeling](https://github.com/elalilab/Stroke_PDGFR-B_Reactivity/blob/main/Widefield_5x_Ipsilateral_Gfap_IntDen.qmd) using [brms](https://paulbuerkner.com/brms/) ([avoiding missused/irrelevant t-test and ANOVAs]{style="color:red;"}).
+
+- And all other things you can imagine...
+:::
+::::
+:::::
+
+
+## Keep track with version control{.center}
+
+::::: {layout-ncol="2" layout-valign="center"}
+:::: {#first-column}
+::: {style="text-align: center;font-size: 100%"} 
+![GitHub screen](images/GitHub_screen.jpg){fig-align="center" width="500" height="300"}
+:::
+::::
+
+:::: {#second-column}
+:::{style="text-align: left;font-size: 75%"}
+With [GitHub]{style="color:magenta;"} {{< bi github>}}  or [GitLab]{style="color:magenta;"} {{< bi gitlab>}} you can:
+
+- {{< bi database-fill-check>}} [Store]{style="color:green;"} your code/data in a secure place and [share it]{style="color:green;"} with collaborators and the public.
+
+- {{< bi subtract>}} Keep a [history of changes]{style="color:green;"} and version your code (v 1.0, 1.2, 2.0).
+
+- {{< bi folder-plus>}} [Link/render]{style="color:green;"} your code in different platforms (i.e [Open Science Framework Repository](https://osf.io/)). 
+
+- {{< bi clipboard2-pulse-fill>}} With your code you [support other researchers]{style="color:green;"} and contribute to a culture of [open and reproducible science]{style="color:green;"}.
+
+:::
+::::
+:::::
+
+# Organizing and sharing data
+
+## 1. Define a dataset schema/road
+
+At the [beginning]{style="color:green;"} (optimal) or [during]{style="color:green;"} (not bad) your research, define an organized scheme for data.
+
+::: callout-tip
+## Think about
+
+-   {{< bi folder-fill >}} Folders/[directory structures]{style="color:green;"}
+-   {{< bi filetype-tiff >}} Think about [file types/formats]{style="color:green;"}
+-   {{< bi file-earmark-font-fill >}} Establish logical/descriptive [naming conventions]{style="color:green;"}
+:::
+
+Overall, ensure the schema is [logical and consistent]{style="color:green;"}. An external user must be able to understand the directory structure.
+
+## 2. Write a readme file 
+
+The (main) {{< bi file-earmark-medical-fill>}} [readme]{style="color:green;"} file is a guide to [understand the dataset]{style="color:green;"} and allow its reuse or execution.
+
+::::: {layout-ncol="2"}
+:::: {#first-column}
+::: {style="text-align: center; font-size: 50%"}
+![From https://github.com/twbs/bootstrap-rubygem](images/readme.webp){fig-align="center" width="500" height="300"}
+:::
+::::
+
+:::: {#second-column}
+::: {style="font-size: 80%;"}
+There are templates/resources to guide the generation of readme files:
+- [Creating a README file](https://blog.datadryad.org/2023/10/18/for-authors-creating-a-readme-for-rapid-data-publication/)\
+- [Readme.so](https://readme.so/)\
+- [Readme.ai](https://readme-ai.streamlit.app/)
+:::
+::::
+:::::
+
+## Contents of a readme file
+
+::: r-fit-text
+Generally, a dataset readme file showcases:
+
+-   {{< bi database-fill >}} A [dataset identifier]{style="color:green;"} showing aspects such as title, authors, data collection date, Geographic information.
+-   {{< bi folder-fill >}} A [map of files/folders]{style="color:green;"} defining the hierarchy of folders and subfolders and its content. Here, the user can also define the naming conventions for files and folders.
+-   {{< bi gear-fill >}} The [methodological information]{style="color:green;"} showcasing the methods for data collection/generation, analysis, and experimental conditions.
+
+::: {.callout-caution collapse="true"}
+## To refresh your memory
+The dataset is a standalone object (apart from the research article). Methods and instruments for data collection [MUST NOT]{style="color:red;"} be relegated to the research article.
+:::
+
+-   {{< bi sd-card-fill >}} A set of [instructions and software]{style="color:green;"} for opening, handling and reproduce research pipelines.
+
+-   {{< bi credit-card-2-front-fill >}} [Sharing and access information]{style="color:green;"} detailing permissions and conditions of use.
+:::
+
+## 3. Organize dataset folders
+
+And [organized scheme]{style="color:green;"} is the {{< bi key-fill >}} key to understand data structure.
+
+::::: {layout-ncol="2"}
+:::: {#first-column}
+::: {style="text-align: center;font-size: 70%"}
+![From pexels.com](images/Matryoska.jpeg)
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: center;font-size: 70%"}
+![File structure](images/files.png){width="75%"}
+:::
+::::
+:::::
+
+## {{< bi diagram-2-fill >}} Diving into the folder tree {.center}
+
+::::: {layout-ncol="2"}
+
+:::: {#first-column}
+::: callout-tip
+{{< bi diagram-3-fill >}} Plan/define [directory structures, file formats, and naming conventions]{style="text-decoration: underline;"}.
+:::
+
+:::{style="text-align: left;font-size: 80%"}
+For example, [TIER 4.0](https://www.projecttier.org/tier-protocol/protocol-4-0/root/) is [systemic template]{style="color:green;"} to standardize and increasing transparency and reproducibility of research data. The user can [download](https://github.com/daniel-manrique/RDM_Training/blob/main/Templates/TIER4.0_DatasetTemplate.zip) a folder structure and adapt it to specific cases.
+:::
+
+::::
+
+:::: {#second-column}
+::: {style="text-align: center;font-size: 50%"}
+![Folder tree](images/tier.png){width="45%"}
+:::
+::::
+:::::
+
+## {{< bi diagram-3-fill >}} Organizing a data folder {.center}
+
+The [data]{style="color:green;"} {{< bi folder-fill >}} must be organized [logically and hierarchically]{style="color:green;"} according to the characteristics of each dataset.
+
+## {{< bi folder-fill >}} Input data
+
+Sharing the [input/raw data]{style="color:green;"} is a research integrity and data management best practice. The [Data_Input/]{style="color:orange;"} {{< bi folder-fill >}} can contain:
+
+::::: {layout-ncol="2"}
+:::: {#first-column}
+:::{style="text-align: left;font-size: 80%"}
+a) [Data files]{style="color:magenta;"} (stored in subfolders if necessary)
+
+-   Original [images]{style="color:green;"} (.tiff, .czi)
+-   Measuring device [output files]{style="color:green;"} (.txt, .csv)
+-   Original registration [datasheets]{style="color:green;"} (.png, .csv, .xlxs)
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: center;font-size: 50%"}
+![Folder tree](images/data_raw.png){width="90%"}
+:::
+::::
+:::::
+
+## 
+
+b) A [metadata]{style="color:magenta;"} file/folder {{< bi folder-fill >}}
+
+This [Metadata/]{style="color:orange;"} {{< bi folder-fill >}} contains information about the listed data files to ensure understanding and usability. It may list:
+
+-   [Data sources guide:]{style="color:green;"} It depicts how the data was [generated]{style="text-decoration: underline;"}. or its [provenance]{style="text-decoration: underline;"}.. This may include [methodological details]{style="text-decoration: underline;"}. and [technical metadata]{style="text-decoration: underline;"}..
+-   [Codebooks / data dictionaries:]{style="color:green;"} Explain the [content of files]{style="text-decoration: underline;"}. (mainly .csv tables). They can be [.txt](https://osf.io/9n3gh) or [.csv-xlxs](https://osf.io/925sh) files.
+
+The aim of this resources is to [sustain the reuse]{style="color:green;"} of the data by providing a faithful and [sufficient description]{style="color:green;"} of the variables.
+
+## {{< bi folder-fill >}} Analysis data{.center}
+
+A [Data_Analysis/]{style="color:orange;"} {{< bi folder-fill >}} contains [processed files]{style="color:green;"}, those used to generate the research results.
+
+::::: {layout-ncol="2"}
+
+:::: {#first-column}
+::: {style="text-align: left; font-size: 80%"}
+Like the input data, this files contain a [codebook/data dictionary]{style="color:green;"}. Also, these files can be accompanied by a [Data_Appendix]{style="color:green;"} files that showcase basic descriptive statistics or show data distributions.
+:::
+::::
+
+:::: {#second-column}
+::: {style="text-align: center;font-size: 50%"}
+![Folder tree](images/data_processed.png){width="70%"}
+:::
+::::
+:::::
+
+## {{< bi folder-fill >}} Intermediate data (Optional) {.center}
+
+A [Data_Intermediate/]{style="color:orange;"} {{< bi folder-fill >}} may contain mid-step processed data, or pre-processed files as part of an analysis pipeline. Examples may be images 'masks' are machine learning classifiers used to further operate with images.
+
+## {{< bi folder-fill >}} Processing scripts
+
+::: r-fit-text
+::: {.callout-caution collapse="true"}
+The data you obtain from measurements may not be formatted and organized to analyze it and generate results.
+:::
+
+A [Scripts_Processing]{style="color:orange;"} {{< bi folder-fill >}} may contain scripts/code that prepare (or transform) the raw data (images, tables) for analysis [Data_Analysis/]{style="color:orange;"} {{< bi folder-fill >}}.
+
+[Examples of workflows:]{style="text-decoration: underline;"}
+
+-   Dropping variables (subsetting the dataset)
+-   Generating new variables (Perform computations, calculate means, etc.)
+-   Combing different information sources (merging tables or files)
+
+::: callout-tip
+Yo can consider saving the generated intermediary files into the [Data_Intermediate/]{style="color:orange;"} {{< bi folder-fill >}}.
+:::
+:::
+
+## {{< bi lightbulb-fill >}} Keep in mind {.center}
+
+You will generate several processing scripts. [Logical naming conventions]{style="color:green;"} are the key to link the input/output data with the processing scripts.
+
+## {{< bi folder-fill >}} Analysis scripts{.smaller}
+
+:::::{layout-ncol="2"}
+
+::::{#first-column}
+The [Scripts_Analisys]{style="color:orange;"} {{< bi folder-fill >}} host scripts/code to generate results that may be in the form of:
+
+-   {{< bi card-image >}} Images
+-   {{< bi file-bar-graph-fill >}} Figures
+-   {{< bi table >}} Tables
+-   {{< bi calculator-fill >}} Statistical models
+::::
+
+::::{#second-column}
+::: {style="text-align: center;font-size: 70%"}
+![Folder tree](images/scripts_processing.png){width="90%"}
+:::
+::::
+
+::: callout-tip
+Generally speaking, this scripts import and handle the [Analysis data]{style="color:orange;"}.
+:::
+
+:::::
+
+## {{< bi folder-fill >}} The output folder
+
+::::: {layout-ncol="2"}
+
+::::{#first-column}
+The [Output/]{style="color:orange;"} {{< bi folder-fill >}} contains subfolders storing the files generated by the analysis scripts in the form of:
+
+-   {{< bi card-image >}} Images
+-   {{< bi file-bar-graph-fill >}} Figures
+-   {{< bi table >}} Tables
+-   {{< bi calculator-fill >}} Statistical models
+::::
+
+::::{#second-column}
+::: {style="text-align: center;font-size: 50%"}
+![Folder tree](images/output.png){width="100%"}
+:::
+::::
+:::::
+
+# Data sharing checklist
+
+## {{< bi card-checklist >}} Sharing data (in repositories) {.smaller}
+
+When you share data ensure its meets these characteristics:
+
+1.  {{< bi diagram-2-fill >}} [Your folders and files are organized in a clear and structured way]{style="color:green;"} (understandable for the community): Use [standardized file formats]{style="color:green;"} (e.g., CSV, TIFF) and check for consistency in [naming conventions]{style="color:green;"}.
+
+2.  {{< bi file-earmark-text-fill >}} [The metadata/readme is as complete as possible]{style="color:green;"} and allow to understand the dataset as standalone object, providing data [collection methods, processing steps, and relevant context]{style="text-decoration: underline;"}.
+
+3.  {{< bi file-person-fill >}} [Verify independent usability]{style="color:green;"}: data must be [complete and understandable]{style="text-decoration: underline;"} (Include any necessary instructions for data interpretation) without needing the accompanying research article.
+
+## In summary {.center}
+
+Be aware that the datatset is a research object to [serve the public and the scientific community]{style="color:green;"}, and that can be used (and cited) [independently]{style="color:green;"} of the research article.
+
+[Better yet, Think about articles as supplements to your dataset!!!]{style="color:green;"}
